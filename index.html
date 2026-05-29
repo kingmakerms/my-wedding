@@ -83,10 +83,10 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--dark);font-fam
 .footer-text{font-family:"Great Vibes",cursive;font-size:clamp(1.3rem,3.5vw,2rem);color:var(--gold);opacity:.7;}
 .petal{position:fixed;pointer-events:none;z-index:3;animation:petalFall linear infinite;opacity:0;}
 @keyframes petalFall{0%{opacity:0;transform:translateY(-20px) rotate(0deg);}10%{opacity:.55;}90%{opacity:.25;}100%{opacity:0;transform:translateY(105vh) rotate(700deg);}}
-.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;color:rgba(201,168,76,.45);font-family:"Cormorant Garamond",serif;font-size:.72rem;letter-spacing:3px;text-transform:uppercase;animation:blink 2s ease-in-out infinite;z-index:5;}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;color:rgba(201,168,76,.45);font-family:"Cormorant Garamond",serif;font-size:.72rem;letter-spacing:3px;text-transform:uppercase;animation:blink 2s ease-in-out infinite;z-index:5;} .scroll-hint[style*="position:relative"]{position:relative!important;bottom:auto!important;left:auto!important;transform:none!important;color:rgba(201,168,76,.85);font-size:.85rem;}
 .scroll-arrow{width:18px;height:18px;border-right:2px solid rgba(201,168,76,.45);border-bottom:2px solid rgba(201,168,76,.45);transform:rotate(45deg);animation:scrollBounce 1.5s ease-in-out infinite;}
 @keyframes scrollBounce{0%,100%{transform:rotate(45deg) translateY(0);}50%{transform:rotate(45deg) translateY(5px);}}
-@media(max-width:480px){.event-card{padding:20px 14px;}.door-text{font-size:1.3rem;}.coin-outer{width:160px;height:160px;}.mobile-note{font-size:1rem;max-width:280px;}}
+@media(max-width:480px){.event-card{padding:20px 14px;}.door-text{font-size:1.3rem;}.coin-outer{width:160px;height:160px;}.mobile-note{font-size:1rem;max-width:280px;} .scroll-hint{color:rgba(201,168,76,.85)!important;font-size:.95rem!important;letter-spacing:4px!important;}.scroll-arrow{border-right:2.5px solid rgba(201,168,76,.85)!important;border-bottom:2.5px solid rgba(201,168,76,.85)!important;}}
 </style>
 </head>
 <body>
@@ -127,7 +127,10 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--dark);font-fam
     <div class="invite-together">Together with their families joyfully invite you to celebrate</div>
     <div class="divider"><div class="div-line"></div><div class="div-diamond"></div><div class="div-line"></div></div>
     <div style="font-family:'Cormorant Garamond',serif;color:rgba(201,168,76,.65);font-size:.82rem;letter-spacing:4px;text-transform:uppercase;">June 2026 · Karnataka</div>
-    <div class="scroll-hint"><span>Scroll</span><div class="scroll-arrow"></div></div>
+    <div class="scroll-hint" style="position:relative;bottom:auto;left:auto;transform:none;margin-top:10px;">
+      <span>Scroll down</span>
+      <div class="scroll-arrow"></div>
+    </div>
   </section>
   <div class="events-wrap">
     <div class="event-card" data-delay="0"><div class="event-badge">✦ Event One ✦</div><div class="event-name">💍 Engagement Ceremony</div><div class="event-datetime"><div class="event-pill">📅 Sunday, 21st June 2026</div><div class="event-pill">🕖 7:00 PM Onwards</div></div><div class="event-venue"><strong>Lalith Bhavan</strong><br>Ranibennur, Karnataka</div><a href="https://maps.app.goo.gl/wwBiVFJ2AYy9Y1ae7" target="_blank" rel="noopener" class="map-btn">📍 Get Directions</a></div>
